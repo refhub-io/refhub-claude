@@ -1,0 +1,21 @@
+{
+  "name": "refhub-marketplace",
+  "owner": {
+    "name": "refhub-io"
+  },
+  "metadata": {
+    "description": "RefHub Claude Code plugins",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "refhub-skill",
+      "description": "Agent skill for operating RefHub through its public API v2",
+      "source": {
+        "source": "github",
+        "repo": "refhub-io/refhub-skill"
+      },
+      "version": "0.1.0"
+    }
+  ]
+}
