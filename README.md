@@ -58,5 +58,5 @@ the plugin repo must have `.claude-plugin/plugin.json` and a `skills/` directory
 
 ## // related
 
-- [refhub-skill](https://github.com/refhub-io/refhub-skill) — agent skill for vault + item operations
+- [refhub-skill](https://github.com/refhub-io/refhub-skill) — agent skill covering the full refhub api v2: vault and item management, import, search, export, audit, semantic scholar metadata enrichment, and pdf upload to google drive
 - [refhub.io](https://refhub.io) — the platform
