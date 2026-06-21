@@ -24,7 +24,7 @@ claude plugin install refhub-skill@refhub-marketplace
 
 | plugin | description | version |
 |--------|-------------|---------|
-| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for operating refhub through its public api v2 | `0.1.0` |
+| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for API-key RefHub vault/item/search/import/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF upload workflows | `1.0.0` |
 
 ---
 
@@ -58,5 +58,5 @@ the plugin repo must have `.claude-plugin/plugin.json` and a `skills/` directory
 
 ## // related
 
-- [refhub-skill](https://github.com/refhub-io/refhub-skill) — agent skill covering the full refhub api v2: vault and item management, import, search, export, audit, semantic scholar metadata enrichment, and pdf upload to google drive
+- [refhub-skill](https://github.com/refhub-io/refhub-skill) — agent skill for RefHub API-key workflows: vault and item management, import, search, export, vault audit, Semantic Scholar discovery/enrichment through `/semantic-scholar/*`, and item-scoped Google Drive PDF upload after Drive is connected in the RefHub web UI. Account setup/admin flows such as API-key lifecycle, Google Drive connect/disconnect, and global audit remain browser/session-JWT workflows.
 - [refhub.io](https://refhub.io) — the platform
