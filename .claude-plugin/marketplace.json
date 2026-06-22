@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "refhub-skill",
-      "description": "Agent skill for operating RefHub through its public API v2",
+      "description": "API-key RefHub agent skill: vaults/items/import/search/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF upload",
       "source": {
         "source": "github",
         "repo": "refhub-io/refhub-skill"
