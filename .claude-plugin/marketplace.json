@@ -14,7 +14,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/refhub-io/refhub-skill.git",
-        "sha": "fd5dc5af3e41cf9176263838dbfe5a860b706c36"
+        "sha": "ceb661e1df7224820d928010d63910120d5347f0"
       },
       "version": "1.0.2"
     }
