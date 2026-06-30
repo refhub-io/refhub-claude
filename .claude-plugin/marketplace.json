@@ -5,17 +5,18 @@
   },
   "metadata": {
     "description": "RefHub Claude Code plugins and skills",
-    "version": "1.0.2"
+    "version": "1.0.4"
   },
   "plugins": [
     {
       "name": "refhub-skill",
       "description": "API-key RefHub agent skill: vaults/items/import/search/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF uploads including large-PDF resumable Drive upload",
       "source": {
-        "source": "github",
-        "repo": "refhub-io/refhub-skill"
+        "source": "url",
+        "url": "https://github.com/refhub-io/refhub-skill.git",
+        "sha": "ceb661e1df7224820d928010d63910120d5347f0"
       },
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   ]
 }

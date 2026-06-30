@@ -11,7 +11,8 @@ Codex integrations live separately in [`refhub-codex`](https://github.com/refhub
 ## // install
 
 ```sh
-claude plugin marketplace add refhub-io/refhub-claude
+claude plugin marketplace add \
+  https://github.com/refhub-io/refhub-claude
 ```
 
 then install any plugin from the registry:
@@ -26,7 +27,7 @@ claude plugin install refhub-skill@refhub-claude
 
 | plugin | description | version |
 |--------|-------------|---------|
-| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for API-key RefHub vault/item/search/import/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF uploads including large-PDF resumable Drive upload | `1.0.1` |
+| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for API-key RefHub vault/item/search/import/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF uploads including large-PDF resumable Drive upload | `1.0.2` |
 
 ---
 
@@ -39,6 +40,26 @@ claude plugin install refhub-skill@refhub-claude
 
 the manifest lists plugin sources. claude code reads this to discover and install plugins. adding a plugin here makes it available to any user who has registered this marketplace.
 
+## // ssh gotcha
+
+`claude plugin marketplace add refhub-io/refhub-claude` uses GitHub shorthand, and Claude resolves that by cloning over SSH:
+
+```text
+git@github.com:refhub-io/refhub-claude.git
+```
+
+That fails on machines without a GitHub SSH key. Use an explicit HTTPS repo URL:
+
+```sh
+claude plugin marketplace add https://github.com/refhub-io/refhub-claude
+```
+
+The declared marketplace name is still `refhub-claude`, so installation is:
+
+```sh
+claude plugin install refhub-skill@refhub-claude
+```
+
 ---
 
 ## // adding a plugin
@@ -49,7 +70,11 @@ edit `.claude-plugin/marketplace.json` and add an entry:
 {
   "name": "your-plugin-name",
   "description": "...",
-  "source": { "source": "github", "repo": "refhub-io/your-plugin-repo" },
+  "source": {
+    "source": "url",
+    "url": "https://github.com/refhub-io/your-plugin-repo.git",
+    "sha": "commit-sha"
+  },
   "version": "x.x.x"
 }
 ```
