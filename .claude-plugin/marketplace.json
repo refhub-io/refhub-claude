@@ -1,11 +1,11 @@
 {
-  "name": "refhub-marketplace",
+  "name": "refhub-claude",
   "owner": {
     "name": "refhub-io"
   },
   "metadata": {
-    "description": "RefHub Claude Code plugins",
-    "version": "1.0.1"
+    "description": "RefHub Claude Code plugins and skills",
+    "version": "1.0.2"
   },
   "plugins": [
     {

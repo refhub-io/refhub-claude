@@ -1,21 +1,23 @@
-# refhub-marketplace
+# refhub-claude
 
 > // claude_code_plugin_registry for [refhub.io](https://refhub.io)
 
-plugin marketplace for claude code. lists all first-party refhub agent integrations — skills, mcp servers, and tooling.
+Claude Code plugin marketplace for first-party RefHub agent integrations.
+
+Codex integrations live separately in [`refhub-codex`](https://github.com/refhub-io/refhub-codex) so each agent runtime keeps native packaging instead of sharing the Claude plugin manifest.
 
 ---
 
 ## // install
 
 ```sh
-claude plugin marketplace add refhub-io/refhub-marketplace
+claude plugin marketplace add refhub-io/refhub-claude
 ```
 
 then install any plugin from the registry:
 
 ```sh
-claude plugin install refhub-skill@refhub-marketplace
+claude plugin install refhub-skill@refhub-claude
 ```
 
 ---
@@ -59,4 +61,5 @@ the plugin repo must have `.claude-plugin/plugin.json` and a `skills/` directory
 ## // related
 
 - [refhub-skill](https://github.com/refhub-io/refhub-skill) — agent skill for RefHub API-key workflows: vault and item management, import, search, export, vault audit, Semantic Scholar discovery/enrichment through `/semantic-scholar/*`, and item-scoped Google Drive PDF uploads after Drive is connected in the RefHub web UI. Small PDFs use the raw item route; larger vault-item PDFs use API-key `/pdf/session`, direct Drive `PUT` to the returned `upload_url`, then `/pdf/complete`. Account setup/admin flows such as API-key lifecycle, Google Drive connect/disconnect, and global audit remain browser/session-JWT workflows.
+- [refhub-codex](https://github.com/refhub-io/refhub-codex) — Codex-native RefHub skill packaging backed by the same `@refhub/cli` execution layer.
 - [refhub.io](https://refhub.io) — the platform
