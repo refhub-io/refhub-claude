@@ -12,7 +12,7 @@ Codex integrations live separately in [`refhub-codex`](https://github.com/refhub
 
 ```sh
 claude plugin marketplace add \
-  https://raw.githubusercontent.com/refhub-io/refhub-claude/main/.claude-plugin/marketplace.json
+  https://github.com/refhub-io/refhub-claude
 ```
 
 then install any plugin from the registry:
@@ -48,13 +48,7 @@ the manifest lists plugin sources. claude code reads this to discover and instal
 git@github.com:refhub-io/refhub-claude.git
 ```
 
-That fails on machines without a GitHub SSH key. Use the raw manifest URL above, or an explicit HTTPS repo URL:
-
-```sh
-claude plugin marketplace add https://github.com/refhub-io/refhub-marketplace
-```
-
-or the renamed repo directly:
+That fails on machines without a GitHub SSH key. Use an explicit HTTPS repo URL:
 
 ```sh
 claude plugin marketplace add https://github.com/refhub-io/refhub-claude
@@ -76,7 +70,11 @@ edit `.claude-plugin/marketplace.json` and add an entry:
 {
   "name": "your-plugin-name",
   "description": "...",
-  "source": { "source": "github", "repo": "refhub-io/your-plugin-repo" },
+  "source": {
+    "source": "url",
+    "url": "https://github.com/refhub-io/your-plugin-repo.git",
+    "sha": "commit-sha"
+  },
   "version": "x.x.x"
 }
 ```
