@@ -24,7 +24,7 @@ claude plugin install refhub-skill@refhub-marketplace
 
 | plugin | description | version |
 |--------|-------------|---------|
-| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for API-key RefHub vault/item/search/import/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF uploads including large-PDF resumable Drive upload | `1.0.0` |
+| [`refhub-skill`](https://github.com/refhub-io/refhub-skill) | agent skill for API-key RefHub vault/item/search/import/export/audit, Semantic Scholar discovery/enrichment, and item-scoped PDF uploads including large-PDF resumable Drive upload | `1.0.1` |
 
 ---
 
